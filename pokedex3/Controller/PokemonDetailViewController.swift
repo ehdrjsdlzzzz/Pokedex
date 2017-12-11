@@ -17,7 +17,10 @@ class PokemonDetailViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = pokemon.name
     }
-    
+}
+
+// MARK: IBAction
+extension PokemonDetailViewController {
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
