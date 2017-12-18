@@ -468,7 +468,18 @@
                         <viewLayoutGuide key="safeArea" id="in0-Vf-6kX"/>
                     </view>
                     <connections>
+                        <outlet property="baseAttackLabel" destination="p5u-fi-bOG" id="Yl2-ZP-E7H"/>
+                        <outlet property="currentEvoImage" destination="ajX-ej-YlX" id="vGf-xJ-I39"/>
+                        <outlet property="defenseLabel" destination="3O0-jV-XDa" id="9Fe-a7-1wZ"/>
+                        <outlet property="descriptionLabel" destination="Kea-m0-y1P" id="l54-tJ-Mv5"/>
+                        <outlet property="evoLabel" destination="N9w-OJ-BOD" id="uCd-s5-f2C"/>
+                        <outlet property="heightLabel" destination="FHu-G4-SM9" id="c4j-pj-0uv"/>
+                        <outlet property="mainImage" destination="1H0-6p-l4h" id="UmL-3p-PmW"/>
                         <outlet property="nameLabel" destination="qB9-GG-fCg" id="uc7-0N-P5u"/>
+                        <outlet property="nextEvoImage" destination="pW8-fz-H9Q" id="ajG-bN-xn7"/>
+                        <outlet property="pokedexIdLabel" destination="Sr8-G1-ctA" id="VXo-h6-sIN"/>
+                        <outlet property="typeLabel" destination="v51-IE-n8N" id="yCe-oi-Keu"/>
+                        <outlet property="weightLabel" destination="c3U-bF-goG" id="Vwq-6Y-sfm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AND-zG-AfM" userLabel="First Responder" sceneMemberID="firstResponder"/>

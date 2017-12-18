@@ -12,6 +12,13 @@ class Pokemon {
     // id,identifier,species_id,height,weight,base_experience,order,is_default
     private var _name: String!
     private var _pokedexID: Int!
+    private var _description: String!
+    private var _type: String!
+    private var _defense: String!
+    private var _height: String!
+    private var _weight: String!
+    private var _baseAttack: String!
+    private var _nextEvolutionTxt: String!
     
     var name:String {
         return _name
