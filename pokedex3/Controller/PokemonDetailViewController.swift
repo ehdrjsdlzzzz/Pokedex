@@ -14,23 +14,42 @@ class PokemonDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var defenseLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var pokedexIdLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var baseAttackLabel: UILabel!
-    @IBOutlet weak var evoLabel: UILabel!
-    @IBOutlet weak var currentEvoImage: UIImageView!
-    @IBOutlet weak var nextEvoImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = nil
+        mainImage.image = nil
+        typeLabel.text = nil
+        defenseLabel.text = nil
+        heightLabel.text = nil
+        pokedexIdLabel.text = nil
+        weightLabel.text = nil
+        baseAttackLabel.text = nil
+        pokemon.downloadPokemonDetail {
+            // 다운로드가 완료되면 실행되는 클로져
+            self.updateUI()
+        }
+    }
+}
+
+// MARK: Additional Method
+
+extension PokemonDetailViewController {
+    func updateUI(){
         nameLabel.text = pokemon.name
         mainImage.image = UIImage(named: "\(pokemon.pokedexID)")
         pokedexIdLabel.text = "\(pokemon.pokedexID)"
-        currentEvoImage.image = UIImage(named: "\(pokemon.pokedexID)")
+        typeLabel.text = pokemon.type
+        defenseLabel.text = pokemon.defense
+        baseAttackLabel.text = pokemon.attack
+        heightLabel.text = pokemon.height
+        weightLabel.text = pokemon.weight
     }
 }
 
